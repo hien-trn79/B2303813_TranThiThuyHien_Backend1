@@ -1,27 +1,29 @@
-exports.create = (req, res, next) => {
+export const create = (req, res, next) => {
     res.send('Handler create')
 }
 
-exports.findAll = (req, res, next) => {
+export const findAll = (req, res, next) => {
     res.send('Handler findAll')
 }
 
-exports.findOne = (req, res, next) => {
+export const findOne = (req, res, next) => {
     res.send('Handler findOne')
 }
 
-exports.update = (req, res, next) => {
+export const update = (req, res, next) => {
     res.send('Handler update')
 }
 
-exports.delete = (req, res, next) => {
+export const remove = (req, res, next) => {
     res.send('Handler delete')
 }
 
-exports.deleteAll = (req, res, next) => {
+export const deleteAll = (req, res, next) => {
     res.send('Handler deleteAll')
 }
 
-exports.findAllFavorite = (req, res, next) => {
+export const findAllFavorite = (req, res, next) => {
     res.send('Handler create')
 }
+
+export default {create, findAll, findOne, update, remove, deleteAll, findAllFavorite}

@@ -1,20 +1,20 @@
 import express from 'express';
-import contacts from '../controllers/contact.controller.js'
+import {create, findAll, findOne, update, remove, deleteAll, findAllFavorite} from '../controllers/contact.controller.js'
 
 const router = express.Router();
 
 // Định nghĩa route riêng cho từng router
 router.route('/')
-    .get(contacts.findAll)
-    .post(contacts.create)
-    .delete(contacts.deleteAll)
+    .get(findAll)
+    .post(create)
+    .delete(deleteAll)
 
 router.route('/favorite')
-    .get(contacts.findAllFavorite)
+    .get(findAllFavorite)
 
 router.route('/:id')
-    .get(contacts.findOne)
-    .put(contacts.update)
-    .delete(contacts.delete)
+    .get(findOne)
+    .put(update)
+    .delete(remove)
 
 export default router;
