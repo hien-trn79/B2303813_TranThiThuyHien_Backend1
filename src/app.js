@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import contactRouter from './app/routes/contact.route.js'
 
 const app = express();
 app.use(cors());
@@ -10,5 +11,8 @@ app.get('/api', (req, res) => {
         message: 'Hello NodeJs'
     })
 })
+
+// config route /api/contacts/
+app.use('/api/contacts/', contactRouter);
 
 export default app;
