@@ -1,29 +1,31 @@
-export const create = (req, res, next) => {
-    res.send('Handler create')
+class contact {
+    create (req, res, next) {
+        res.send('handler create')
+    }
+
+    findAll (req, res, next) {
+        res.send('handler findAll')
+    }
+
+    findOne (req, res, next) {
+        res.send('handler findOne')
+    }
+
+    update (req, res, next) {
+        res.send('handler update')
+    }
+
+    delete (req, res, next) {
+        res.send('handler create')
+    }
+
+    deleteAll (req, res, next) {
+        res.send('handler deleteAll')
+    }
+
+    findAllFavorite (req, res, next) {
+        res.send('handler findAllFavorite')
+    }
 }
 
-export const findAll = (req, res, next) => {
-    res.send('Handler findAll')
-}
-
-export const findOne = (req, res, next) => {
-    res.send('Handler findOne')
-}
-
-export const update = (req, res, next) => {
-    res.send('Handler update')
-}
-
-export const remove = (req, res, next) => {
-    res.send('Handler delete')
-}
-
-export const deleteAll = (req, res, next) => {
-    res.send('Handler deleteAll')
-}
-
-export const findAllFavorite = (req, res, next) => {
-    res.send('Handler create')
-}
-
-export default {create, findAll, findOne, update, remove, deleteAll, findAllFavorite}
+export default new contact();
